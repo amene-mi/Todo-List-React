@@ -1,16 +1,18 @@
-import { useReducer } from 'react';
+import {useReducer} from 'react';
 
-function useTodos() {
+function useTasks() {
     let id = 1;
     const initialState = [];
+
     function reducer(state=initialState, action) {
         switch (action.type) {
-            case 'ADD_TODO':
+            case "ADD_TODO":
                 return [...state, { id: id++, text: action.payload.text }];
             default:
                 return state;
         }
     }
+
     const [state, dispatch] = useReducer(reducer, initialState);
     return {
         state,
@@ -18,4 +20,4 @@ function useTodos() {
     }
 }
 
-export default useTodos;
+export default useTasks;

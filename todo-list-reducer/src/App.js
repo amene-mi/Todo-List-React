@@ -1,19 +1,16 @@
-import { useEffect } from 'react';
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
-import useTodos from "./hooks/useTodos";
+import useTasks from "./hooks/useTasks";
 
 function App() {
-  const { state, dispatch } = useTodos();
-
-  useEffect(() => {
-    dispatch({ type: 'ADD_TODO', payload: { text: 'Learn React' } });
-  }, [state, dispatch]);
-
+  const { state, dispatch } = useTasks();
+  const handleAddNewTask = (text) => {
+    dispatch({ type: "ADD_TODO", payload: { text } });
+  }
   return (
     <>
-      <TodoForm />
-      <TodoList todos={state}/>
+      <TodoForm handleSubmit={handleAddNewTask} />
+      <TodoList tasks={state} />
     </>
   );
 }

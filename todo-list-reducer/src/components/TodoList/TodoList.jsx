@@ -1,12 +1,15 @@
 import TodoItem from './TodoItem';
 
-function TodoList({ todos }){
-    if(todos.length === 0){
+function TodoList(props){
+    const {tasks}=props;
+    if(tasks.length === 0){
         return (<p>There is no task to show</p>);
     }
     return (
         <div>
-           { todos.map(todo=>(<TodoItem key={todo.id} todo={todo}/>))}
+           {tasks.map((task,index)=>{
+           return <TodoItem key={index} todo={task}/>
+           })}
         </div>
     )
 }
