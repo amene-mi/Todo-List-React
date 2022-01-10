@@ -1,7 +1,12 @@
-function TodoList(){
+import TodoItem from './TodoItem';
+
+function TodoList({ todos }){
+    if(todos.length === 0){
+        return (<p>There is no task to show</p>);
+    }
     return (
         <div>
-        <p>There is no task to show</p>
+           { todos.map(todo=>(<TodoItem key={todo.id} todo={todo}/>))}
         </div>
     )
 }

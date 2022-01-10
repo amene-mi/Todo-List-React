@@ -1,10 +1,8 @@
-function TodoItem({content}){
+function TodoItem({todo}){
     
     return (
         <li>
-            <span>
-               {content}
-            </span>
+            {todo}
         </li>
     )
 }
