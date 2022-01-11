@@ -1,7 +1,6 @@
 import TodoItem from './TodoItem';
 
-function TodoList(props){
-    const {tasks}=props;
+function TodoList({tasks}){
     if(tasks.length === 0){
         return (<p>There is no task to show</p>);
     }

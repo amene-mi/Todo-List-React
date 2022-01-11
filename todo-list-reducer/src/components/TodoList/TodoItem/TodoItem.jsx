@@ -1,5 +1,4 @@
-function TodoItem(props){
-    const {todo} = props;
+function TodoItem({todo}){
     return (
         <li>
             {todo}

@@ -1,4 +1,4 @@
-import {useReducer} from 'react';
+import { useReducer } from 'react';
 
 function useTasks() {
     let id = 1;

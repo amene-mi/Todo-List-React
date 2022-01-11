@@ -7,6 +7,7 @@ function App() {
   const handleAddNewTask = (text) => {
     dispatch({ type: "ADD_TODO", payload: { text } });
   }
+
   return (
     <>
       <TodoForm handleSubmit={handleAddNewTask} />
