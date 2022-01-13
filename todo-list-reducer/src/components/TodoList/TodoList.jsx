@@ -6,9 +6,7 @@ function TodoList({tasks}){
     }
     return (
         <div>
-           {tasks.map((task,index)=>{
-           return <TodoItem key={index} todo={task}/>
-           })}
+           {tasks.map(task=>{return <TodoItem key={task.id} todo={task}/>})}
         </div>
     )
 }
