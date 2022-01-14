@@ -1,0 +1,21 @@
+.todo{
+    display: flex;
+    background-color: white;
+    border-left: 1ch rgb(255, 138, 29);
+}
+
+.todo__text {
+    font-weight: bold;
+}
+
+.todo__status{
+    color: rgb(61, 61, 61);
+}
+
+.todo__delete{
+    color:rgb(255, 138, 29);
+}
+
+.todo__update{
+    color: rgb(0, 51, 160);
+}

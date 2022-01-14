@@ -1,0 +1,6 @@
+.todo__list {
+    display: flex;
+    padding: 20px 10px 10px 10px;
+    flex-wrap: wrap;
+    color: white;
+}
