@@ -1,5 +1,4 @@
 import TodoForm from "./components/TodoForm";
-import TodoList from "./components/TodoList";
 import useTasks from "./hooks/useTasks";
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
   return (
     <>
       <TodoForm handleSubmit={handleAddNewTask} />
-      <TodoList tasks={state} />
     </>
   );
 }
