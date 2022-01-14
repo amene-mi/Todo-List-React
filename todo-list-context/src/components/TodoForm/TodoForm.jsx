@@ -1,5 +1,7 @@
 import { useCallback, useState } from "react";
 import useTodo from "../../hooks/useTodos";
+import styles from './TodoForm.module.css';
+import TodoList from '../TodoList';
 
 function TodoForm() {
   const { handleAddNewTodo } = useTodo();
@@ -19,14 +21,18 @@ function TodoForm() {
   );
 
   return (
-    <form onSubmit={handleSubmitForm}>
-      <input
-        type="text"
-        placeholder="Enter a  new Todo"
-        value={todo}
-        onChange={handleChange}
-      />
-      <button type="submit">Add</button>
+    <form onSubmit={handleSubmitForm} className={styles.container}>
+      <div className={styles.todo}>
+        <input className={styles.input}
+          type="text"
+          placeholder="Enter a  new Todo"
+          value={todo}
+          onChange={handleChange}
+        />
+        <button className={styles.button} type="submit">Add</button>
+      </div>
+      
+      <TodoList/>
     </form>
   );
 }
