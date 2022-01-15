@@ -1,13 +1,13 @@
 import { useReducer } from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 function useTasks() {
-    let id = 1;
     const initialState = [];
 
     function reducer(state = initialState, action) {
+        debugger;
         switch (action.type) {
             case "ADD_TODO":
-                return [...state, { id: id++, text: action.payload.text }];
+                return [...state, { id: uuidv4(), text: action.payload.text }];
             case "Remove":
                 return state.filter(task => task.id !== action.payload.id)
             default:

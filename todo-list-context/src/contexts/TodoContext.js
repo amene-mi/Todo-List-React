@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 export const TodoContext = React.createContext({});
 
 export default function TodoContextProvider({ children }) {
-    let id = 1;
     const [todos, setTodos] = useState([]);
 
     const handleAddNewTodo = text => {

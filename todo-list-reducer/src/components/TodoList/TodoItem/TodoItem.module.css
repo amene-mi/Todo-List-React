@@ -1,21 +1,48 @@
+*{  
+    box-sizing: border-box;
+}
 .todo{
     display: flex;
+    flex-direction: row;
+    border-left: 4px solid rgb(241, 126, 17);
     background-color: white;
-    border-left: 1ch rgb(255, 138, 29);
+    width: 47%;
+    margin: 7px;
+    padding: 10px;
 }
 
 .todo__text {
-    font-weight: bold;
+    color: black;
+    font-weight: 700;
+    flex-grow: 1;
 }
 
-.todo__status{
-    color: rgb(61, 61, 61);
+.todo__action{
+    flex-grow: 0;
 }
 
 .todo__delete{
     color:rgb(255, 138, 29);
+    cursor: pointer; 
 }
 
 .todo__update{
-    color: rgb(0, 51, 160);
+    color:rgb(2, 27, 75);
+    cursor: pointer;
+}
+
+.todo__input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid rgb(2, 27, 75);
+    border-radius: 10px 0 0 10px;
+}
+
+.btn__update {
+    flex-grow: 0;
+    background-color:rgb(241, 126, 17);
+    color: white;
+    border: 1px solid rgb(241, 126, 17);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
 }
